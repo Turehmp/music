@@ -1,0 +1,375 @@
+Audio event log: audio services lifecycle
+08-08 06:57:05:111 AudioService()
+
+Message handler (watch for unhandled messages):
+  Handler (com.android.server.audio.AudioService$AudioHandler) {53238a} @ 777579
+    Looper (AudioService, tid 91) {ef65dfb}
+      Message 0: { when=+26s155ms what=11 obj=android target=com.android.server.audio.AudioService$AudioHandler }
+      (Total messages: 1, polling=true, quitting=false)
+
+MediaFocusControl dump time: 07.09.43
+
+Audio Focus stack entries (last is top of stack):
+  source:android.os.BinderProxy@aaaae18 -- pack: com.miui.player -- client: android.media.AudioManager@e26e360com.miui.player.newplayer.manager.module.d@c164019 -- gain: GAIN -- flags: DELAY_OK -- loss: none -- notified: true -- uid: 10307 -- attr: AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MUSIC flags=0x800 tags= bundle=null -- sdk:34
+
+
+No external focus policy
+
+
+
+ Notify on duck:  true
+
+ In ring or call: false
+
+
+
+Audio event log: focus commands as seen by MediaFocusControl
+08-08 06:58:04:994 requestAudioFocus() from uid/pid 10307/4547 clientId=android.media.AudioManager@e26e360com.miui.player.newplayer.manager.module.d@c164019 callingPack=com.miui.player req=1 flags=0x1 sdk=34
+08-08 06:58:05:172 requestAudioFocus() from uid/pid 10307/4547 clientId=android.media.AudioManager@e26e360com.miui.player.newplayer.manager.module.d@c164019 callingPack=com.miui.player req=1 flags=0x1 sdk=34
+08-08 06:58:08:848 requestAudioFocus() from uid/pid 10307/4547 clientId=android.media.AudioManager@e26e360com.miui.player.newplayer.manager.module.d@c164019 callingPack=com.miui.player req=1 flags=0x1 sdk=34
+08-08 07:00:37:932 requestAudioFocus() from uid/pid 10307/4547 clientId=android.media.AudioManager@e26e360com.miui.player.newplayer.manager.module.d@c164019 callingPack=com.miui.player req=1 flags=0x1 sdk=34
+08-08 07:05:16:937 requestAudioFocus() from uid/pid 10307/4547 clientId=android.media.AudioManager@e26e360com.miui.player.newplayer.manager.module.d@c164019 callingPack=com.miui.player req=1 flags=0x1 sdk=34
+Multi Audio Focus enabled :false
+
+Stream volumes (device: index)
+- STREAM_VOICE_CALL:
+   Muted: false
+   Muted Internally: false
+   Min: 1
+   Max: 7
+   streamVolume:5
+   Current: 4 (headset): 5, 40000000 (default): 5
+   Devices: headset
+- STREAM_SYSTEM:
+   Muted: true
+   Muted Internally: false
+   Min: 0
+   Max: 7
+   streamVolume:0
+   Current: 2 (speaker): 0, 40000000 (default): 5
+   Devices: headset
+- STREAM_RING:
+   Muted: true
+   Muted Internally: false
+   Min: 0
+   Max: 7
+   streamVolume:0
+   Current: 2 (speaker): 0, 40000000 (default): 5
+   Devices: speaker, headset
+- STREAM_MUSIC:
+   Muted: false
+   Muted Internally: false
+   Min: 0
+   Max: 15
+   streamVolume:8
+   Current: 2 (speaker): 0, 4 (headset): 8, 4000000 (usb_headset): 3, 40000000 (default): 5
+   Devices: headset
+- STREAM_ALARM:
+   Muted: false
+   Muted Internally: false
+   Min: 1
+   Max: 7
+   streamVolume:1
+   Current: 2 (speaker): 1, 40000000 (default): 6
+   Devices: speaker, headset
+- STREAM_NOTIFICATION:
+   Muted: true
+   Muted Internally: false
+   Min: 0
+   Max: 7
+   streamVolume:0
+   Current: 2 (speaker): 0, 40000000 (default): 5
+   Devices: headset
+- STREAM_BLUETOOTH_SCO:
+   Muted: false
+   Muted Internally: false
+   Min: 0
+   Max: 15
+   streamVolume:7
+   Current: 40000000 (default): 7
+   Devices: headset
+- STREAM_SYSTEM_ENFORCED:
+   Muted: true
+   Muted Internally: false
+   Min: 0
+   Max: 7
+   streamVolume:0
+   Current: 2 (speaker): 0, 40000000 (default): 5
+   Devices: headset
+- STREAM_DTMF:
+   Muted: true
+   Muted Internally: false
+   Min: 0
+   Max: 15
+   streamVolume:0
+   Current: 2 (speaker): 0, 40000000 (default): 11
+   Devices: headset
+- STREAM_TTS:
+   Muted: false
+   Muted Internally: false
+   Min: 0
+   Max: 15
+   streamVolume:8
+   Current: 2 (speaker): 8, 4 (headset): 8, 4000000 (usb_headset): 3, 40000000 (default): 5
+   Devices: speaker
+- STREAM_ACCESSIBILITY:
+   Muted: false
+   Muted Internally: false
+   Min: 1
+   Max: 15
+   streamVolume:9
+   Current: 2 (speaker): 1, 4 (headset): 9, 4000000 (usb_headset): 4, 40000000 (default): 6
+   Devices: headset
+- STREAM_ASSISTANT:
+   Muted: false
+   Muted Internally: false
+   Min: 0
+   Max: 15
+   streamVolume:8
+   Current: 2 (speaker): 0, 4 (headset): 8, 4000000 (usb_headset): 3, 40000000 (default): 5
+   Devices: headset
+
+- mute affected streams = 0x6f
+
+Volume Groups (device: index)
+- VOLUME GROUP AUDIO_STREAM_ACCESSIBILITY:
+   Min: 1
+   Max: 15
+   Current: 40000000 (default): 6
+   Devices: headset
+- VOLUME GROUP AUDIO_STREAM_ALARM:
+   Min: 1
+   Max: 7
+   Current: 40000000 (default): 6
+   Devices: speaker
+- VOLUME GROUP AUDIO_STREAM_DTMF:
+   Min: 0
+   Max: 15
+   Current: 40000000 (default): 11
+   Devices: headset
+- VOLUME GROUP AUDIO_STREAM_ENFORCED_AUDIBLE:
+   Min: 0
+   Max: 7
+   Current: 40000000 (default): 5
+   Devices: headset
+- VOLUME GROUP AUDIO_STREAM_MUSIC:
+   Min: 0
+   Max: 15
+   Current: 40000000 (default): 5
+   Devices: headset
+- VOLUME GROUP AUDIO_STREAM_NOTIFICATION:
+   Min: 0
+   Max: 7
+   Current: 40000000 (default): 5
+   Devices: headset
+- VOLUME GROUP AUDIO_STREAM_REROUTING:
+   Min: 0
+   Max: 15
+   Current: 40000000 (default): 5
+   Devices: headset
+- VOLUME GROUP AUDIO_STREAM_RING:
+   Min: 0
+   Max: 7
+   Current: 40000000 (default): 5
+   Devices: speaker
+- VOLUME GROUP AUDIO_STREAM_SYSTEM:
+   Min: 0
+   Max: 7
+   Current: 40000000 (default): 5
+   Devices: headset
+- VOLUME GROUP AUDIO_STREAM_VOICE_CALL:
+   Min: 1
+   Max: 7
+   Current: 40000000 (default): 5
+   Devices: headset
+- VOLUME GROUP AUDIO_STREAM_ASSISTANT:
+   Min: 0
+   Max: 15
+   Current: 40000000 (default): 5
+   Devices: headset
+- VOLUME GROUP AUDIO_STREAM_CALL_ASSISTANT:
+   Min: 0
+   Max: 15
+   Current: 40000000 (default): 5
+   Devices: headset
+
+Ringer mode: 
+- mode (internal) = SILENT
+- mode (external) = SILENT
+- zen mode:ZEN_MODE_OFF
+- ringer mode affected streams = 0x1a6 (STREAM_SYSTEM,STREAM_RING,STREAM_NOTIFICATION,STREAM_SYSTEM_ENFORCED,STREAM_DTMF)
+- ringer mode muted streams = 0x1a6 (STREAM_SYSTEM,STREAM_RING,STREAM_NOTIFICATION,STREAM_SYSTEM_ENFORCED,STREAM_DTMF)
+- delegate = ZenModeHelper
+
+Audio routes:
+  mMainType=0x1
+  mBluetoothName=null
+
+Other state:
+  mVolumeController=VolumeController(android.os.BinderProxy@a47a071,mVisible=false)
+  mSafeMediaVolumeState=SAFE_MEDIA_VOLUME_INACTIVE
+  mSafeMediaVolumeIndex=100
+  mSafeUsbMediaVolumeIndex=30
+  mSafeUsbMediaVolumeDbfs=-37.0
+  sIndependentA11yVolume=false
+  mPendingVolumeCommand=null
+  mMusicActiveMs=2700001
+  mMcc=510
+  mCameraSoundForced=false
+  mHasVibrator=true
+  mVolumePolicy=VolumePolicy[volumeDownToEnterSilent=false,volumeUpToExitSilent=false,doNotDisturbWhenSilent=false,vibrateToSilentDebounce=400]
+  mAvrcpAbsVolSupported=false
+  mIsSingleVolume=false
+  mUseFixedVolume=false
+  mFixedVolumeDevices=0x1000,0x200000,0x40000,0x80000
+  mExtVolumeController=null
+  mHdmiCecSink=false
+  mHdmiAudioSystemClient=null
+  mHdmiPlaybackClient=null
+  mHdmiTvClient=null
+  mHdmiSystemAudioSupported=false
+  mHdmiCecVolumeControlEnabled=false
+  mIsCallScreeningModeSupported=true
+  mic mute FromSwitch=false FromRestrictions=false FromApi=false from system=false
+Audio policies:
+Audio event log: dynamic policy events (logged when command received by AudioService)
+
+PlaybackActivityMonitor dump time: 07.09.43
+
+  playback listeners:
+ (S)com.android.server.audio.PlaybackActivityMonitor$PlayMonitorClient@bc7ee56
+
+
+  players:
+  AudioPlaybackConfiguration piid:15 type:android.media.SoundPool u/pid:1000/1245 state:idle attr:AudioAttributes: usage=USAGE_ASSISTANCE_SONIFICATION content=CONTENT_TYPE_SONIFICATION flags=0x800 tags= bundle=null
+  AudioPlaybackConfiguration piid:23 type:android.media.SoundPool u/pid:10285/1403 state:idle attr:AudioAttributes: usage=USAGE_ASSISTANCE_SONIFICATION content=CONTENT_TYPE_SONIFICATION flags=0x800 tags= bundle=null
+  AudioPlaybackConfiguration piid:55 type:android.media.AudioTrack u/pid:10307/4547 state:started attr:AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MUSIC flags=0x800 tags= bundle=null
+  AudioPlaybackConfiguration piid:71 type:android.media.SoundPool u/pid:10315/3701 state:idle attr:AudioAttributes: usage=USAGE_ASSISTANCE_SONIFICATION content=CONTENT_TYPE_SONIFICATION flags=0x800 tags= bundle=null
+
+  ducked players piids:
+
+  muted player piids:
+
+  banned uids:
+
+Audio event log: playback activity as reported through PlayerBase
+08-08 06:57:06:393 new player piid:15 uid/pid:1000/1245 type:android.media.SoundPool attr:AudioAttributes: usage=USAGE_ASSISTANCE_SONIFICATION content=CONTENT_TYPE_SONIFICATION flags=0x800 tags= bundle=null
+08-08 06:57:07:661 new player piid:23 uid/pid:10285/1403 type:android.media.SoundPool attr:AudioAttributes: usage=USAGE_ASSISTANCE_SONIFICATION content=CONTENT_TYPE_SONIFICATION flags=0x800 tags= bundle=null
+08-08 06:58:04:727 new player piid:31 uid/pid:10307/4547 type:android.media.AudioTrack attr:AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MUSIC flags=0x800 tags= bundle=null
+08-08 06:58:04:732 player piid:31 state:started
+08-08 06:58:08:405 player piid:31 state:paused
+08-08 06:58:08:498 player piid:31 state:stopped
+08-08 06:58:08:503 releasing player piid:31
+08-08 06:58:08:837 new player piid:39 uid/pid:10307/4547 type:android.media.AudioTrack attr:AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MUSIC flags=0x800 tags= bundle=null
+08-08 06:58:08:839 player piid:39 state:started
+08-08 07:00:37:643 player piid:39 state:paused
+08-08 07:00:37:644 player piid:39 state:stopped
+08-08 07:00:37:644 releasing player piid:39
+08-08 07:00:37:911 new player piid:47 uid/pid:10307/4547 type:android.media.AudioTrack attr:AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MUSIC flags=0x800 tags= bundle=null
+08-08 07:00:37:913 player piid:47 state:started
+08-08 07:05:16:664 player piid:47 state:paused
+08-08 07:05:16:665 player piid:47 state:stopped
+08-08 07:05:16:666 releasing player piid:47
+08-08 07:05:16:917 new player piid:55 uid/pid:10307/4547 type:android.media.AudioTrack attr:AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MUSIC flags=0x800 tags= bundle=null
+08-08 07:05:16:919 player piid:55 state:started
+08-08 07:08:53:711 new player piid:63 uid/pid:10315/3701 type:android.media.SoundPool attr:AudioAttributes: usage=USAGE_ASSISTANCE_SONIFICATION content=CONTENT_TYPE_SONIFICATION flags=0x800 tags= bundle=null
+08-08 07:08:54:629 releasing player piid:63
+08-08 07:09:10:079 new player piid:71 uid/pid:10315/3701 type:android.media.SoundPool attr:AudioAttributes: usage=USAGE_ASSISTANCE_SONIFICATION content=CONTENT_TYPE_SONIFICATION flags=0x800 tags= bundle=null
+
+  allowed capture policies:
+
+RecordActivityMonitor dump time: 07.09.43
+
+
+Audio event log: recording activity received by AudioService
+
+AudioDeviceBroker:
+  Message handler (watch for unhandled messages):
+    Handler (com.android.server.audio.AudioDeviceBroker$BrokerHandler) {b42ded7} @ 777598
+      Looper (AudioDeviceBroker, tid 92) {ca893c4}
+        (Total messages: 0, polling=true, quitting=false)
+
+  Preferred devices for strategy:
+
+  Connected devices:
+    [DeviceInfo: type:0x4 (headset) name:h2w addr: codec: 0]
+    [DeviceInfo: type:0x80000010 (headset) name:h2w addr: codec: 0]
+
+  APM Connected device (A2DP sink only):
+
+  mForcedUseForComm: FORCE_NONE
+  mForcedUseForCommExt: FORCE_NONE
+  mModeOwnerPid: 0
+  Speakerphone clients:
+
+  mBluetoothHeadset: null
+  mBluetoothHeadsetDevice: null
+  mScoAudioState: SCO_STATE_INACTIVE
+  mScoAudioMode: SCO_MODE_VIRTUAL_CALL
+  Sco clients:
+
+  mHearingAid: null
+  mA2dp: null
+  mAvrcpAbsVolSupported: false
+
+SoundEffects:
+  Message handler (watch for unhandled messages):
+  Handler (com.android.server.audio.SoundEffectsHelper$SfxHandler) {e64d2ad} @ 777598
+    Looper (AS.SfxWorker, tid 90) {7ec99e2}
+      (Total messages: 0, polling=true, quitting=false)
+  Default attenuation (dB): -6
+Audio event log: Sound Effects Loading
+08-08 06:57:06:389 effects loading started
+08-08 06:57:07:499 effect Effect_Tick.ogg loaded
+08-08 06:57:07:509 effect KeypressStandard.ogg loaded
+08-08 06:57:07:576 effect KeypressDelete.ogg loaded
+08-08 06:57:07:597 effect KeypressSpacebar.ogg loaded
+08-08 06:57:07:650 effect KeypressReturn.ogg loaded
+08-08 06:57:07:680 effect KeypressInvalid.ogg loaded
+08-08 06:57:07:680 effects loading completed
+
+
+
+Event logs:
+Audio event log: phone state (logged after successful call to AudioSystem.setPhoneState(int, int))
+
+
+Audio event log: wired/A2DP/hearing aid device connection
+08-08 06:57:09:032 setWiredDeviceConnectionState( type:4 state:DEVICE_STATE_AVAILABLE addr: name:h2w) from android
+08-08 06:57:09:054 setWiredDeviceConnectionState( type:80000010 state:DEVICE_STATE_AVAILABLE addr: name:h2w) from android
+
+
+Audio event log: force use (logged before setForceUse() is executed)
+08-08 06:57:05:133 setForceUse(FOR_SYSTEM, FORCE_NONE) due to AudioService ctor
+08-08 06:57:05:138 setForceUse(FOR_ENCODED_SURROUND, FORCE_NONE) due to readPersistedSettings
+08-08 06:57:05:139 setForceUse(FOR_DOCK, FORCE_ANALOG_DOCK) due to readDockAudioSettings
+08-08 06:57:05:263 setForceUse(FOR_VIBRATE_RINGING, FORCE_NONE) due to muteRingerModeStreams() from u/pid:1000/1245
+08-08 06:57:06:381 setForceUse(FOR_COMMUNICATION, FORCE_NONE) due to resetBluetoothSco
+08-08 06:57:06:382 setForceUse(FOR_RECORD, FORCE_NONE) due to resetBluetoothSco
+08-08 06:57:06:390 setForceUse(FOR_VIBRATE_RINGING, FORCE_NONE) due to muteRingerModeStreams() from u/pid:1000/1245
+08-08 06:57:08:746 setForceUse(FOR_DOCK, FORCE_ANALOG_DOCK) due to readDockAudioSettings
+08-08 06:57:08:746 setForceUse(FOR_ENCODED_SURROUND, FORCE_NONE) due to readPersistedSettings
+08-08 06:57:08:772 setForceUse(FOR_VIBRATE_RINGING, FORCE_NONE) due to muteRingerModeStreams() from u/pid:1000/1245
+08-08 06:57:09:045 setForceUse(FOR_MEDIA, FORCE_NO_BT_A2DP) due to setBluetoothA2dpOn(false) from u/pid:1000/1245 src:onSetWiredDeviceConnectionState state not DISCONNECTED
+08-08 06:57:09:379 setForceUse(FOR_COMMUNICATION, FORCE_NONE) due to resetBluetoothSco
+08-08 06:57:09:379 setForceUse(FOR_VIBRATE_RINGING, FORCE_NONE) due to muteRingerModeStreams() from u/pid:1000/1245
+08-08 06:57:09:379 setForceUse(FOR_RECORD, FORCE_NONE) due to resetBluetoothSco
+08-08 07:00:00:020 setForceUse(FOR_DOCK, FORCE_ANALOG_DOCK) due to readDockAudioSettings
+
+
+Audio event log: volume changes (logged when command received by AudioService)
+08-08 06:58:02:709 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_LOWER flags:0x1011) from android/android uid:1000
+08-08 06:58:03:177 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_LOWER flags:0x1011) from android/android uid:1000
+08-08 06:58:09:176 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_LOWER flags:0x1011) from android/android uid:1000
+08-08 06:58:12:840 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_RAISE flags:0x1011) from android/android uid:1000
+08-08 06:58:15:646 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_RAISE flags:0x1011) from android/android uid:1000
+08-08 06:58:16:067 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_RAISE flags:0x1011) from android/android uid:1000
+08-08 06:58:50:856 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_RAISE flags:0x1011) from android/android uid:1000
+08-08 06:58:51:193 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_RAISE flags:0x1011) from android/android uid:1000
+08-08 07:00:04:616 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_LOWER flags:0x1011) from android/android uid:1000
+08-08 07:00:05:353 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_LOWER flags:0x1011) from android/android uid:1000
+08-08 07:05:39:290 adjustSuggestedStreamVolume(sugg:STREAM_MUSIC dir:ADJUST_RAISE flags:0x1011) from android/android uid:1000
+
+
+Supported System Usages:
+	USAGE_CALL_ASSISTANT
